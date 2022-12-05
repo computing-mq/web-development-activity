@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web Development Activity: Fake News</title>
+    </head>
+    <body>
+
+        <h3>Fake News</h3>
+        <p>This exercise is about modifying the content of a page in your web 
+        browser using Javascript.&nbsp; As we have said, Javascript has access 
+        to the current page via the Document Object Model or DOM.&nbsp; In your 
+        browser, the variable <code>document</code> represents the current document 
+        and your code can use it to read and write to the current page.&nbsp; In this 
+        exercise we will use the developer tools Javascript console to write Javascript 
+        to access parts of the main page of a newspaper site and, just for fun, 
+        modify their contents. The instructions here relate to Chrome but some 
+        variation will work in any browser.</p>
+
+        <ol>
+            <li>Go to the main page of a news website, I recommend 
+                    <a href="https://www.petnews.com.au/" target="_blank">Pet Industry News</a>
+                    or <a href="https://www.dailypaws.com/" target="_blank">The Daily Paws</a> (real
+                    news is too depressing at the moment). Whatever site you choose 
+                    should have headlines on the front page.</li>
+            <li>Right click on one of the headlines and choose "Inspect"</li>
+            <li>This should show you the HTML of the page with the element corresponding 
+                to your headline highlighted. Take note of the kind of element 
+                it is (eg. &lt;h3&gt;) and any class attributes it has. You will 
+                use these to select this element in your Javascript code.</li>
+            <li>Switch to the Console tab in developer tools</li>
+        </ol>
+
+        <p>The console allows you to run Javascript code in the context of the current page, 
+            so the document variable will represent the page you are viewing.
+            Write Javascript code to select all of the headline elements, so if you saw 
+            that they were all &lt;h3&gt; elements you might write:</p>
+
+        <pre>headlines = document.getElementsByTagName("h3")</pre>
+
+        <p>Take the first of these and find the HTML content of the heading:</p>
+
+        <pre>headlines[0].innerHTML</pre>
+
+        <p>Now modify this to add your own message to the page</p>
+
+        <pre>headlines[0].innerHTML = "COMP2110 Found to be Best Unit in the Universe!"</pre>
+
+        <p>Check the page to see your updated headline.</p>
+
+        <p>Ok, so we can fake the news, that's good but we can go further.</p>
+
+        <ol>
+        <li>Write a for loop that changes the content of all of the headlines 
+            to your chosen message</li>
+        <li>Write a function that takes your new message as an argument and 
+            modifies the headlines when it is called</li><li>On Pet News at 
+                least there are captions over some of the images - see if you can 
+                target these too - look at the class names on the elements 
+                containing the text.</li>
+        </ol>
+
+        <p>Now, be careful to only use your new-found powers for good, not evil.</p>
+    </body>
+</html>
+
