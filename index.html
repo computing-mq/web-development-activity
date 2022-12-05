@@ -1,16 +1,51 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Web Development Activity: Fake News</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" href="https://www.mq.edu.au/favicon.ico" sizes="any">
+        <script language="javascript" src="script.js"></script>
     </head>
     <body>
+        <header>
+            <img src="mq-logo.png" alt="Macquarie University logo">
+            <div>
+                <h1>Macquarie University: School of Computing</h1>
+                <h2>Web Development Activity</h2>
+            </div>
+        </header>
 
-        <h3>Fake News</h3>
+        <p>In this activity we will explore behind the scenes in your 
+            web browser to look at the tools that web developers can use 
+            when building web applications.  We'll look at Javascript, the 
+            programming language of the web and how you can use it to
+            modify a web page.
+        </p>
+
+        <h2>Your Browser Development Tools</h2>
+
+        <p>You can <a href="https://developer.chrome.com/docs/devtools/open/">open
+            the developer tools
+        </a> in Chrome (and most other browsers) by hitting F12.  
+        (Do it now!)
+        There are a number of tabs.  We'll mostly use
+        the Elements and Console tabs for this activity.  
+        </p>
+
+        <p>In the <i>Elements</i> tab you can view the structure of the HTML 
+        page - this is the language that web pages are written in.  
+        Take a look at the structure of this page.  Look for the paragraphs
+        &lt;p&gt;, and headers &lt;h2&gt;.</p>
+
+        <h2>Fake News</h2>
+
         <p>This exercise is about modifying the content of a page in your web 
-        browser using Javascript.&nbsp; As we have said, Javascript has access 
-        to the current page via the Document Object Model or DOM.&nbsp; In your 
+        browser using Javascript.  As we have said, Javascript has access 
+        to the current page via the Document Object Model or DOM.  In your 
         browser, the variable <code>document</code> represents the current document 
-        and your code can use it to read and write to the current page.&nbsp; In this 
+        and your code can use it to read and write to the current page.  In this 
         exercise we will use the developer tools Javascript console to write Javascript 
         to access parts of the main page of a newspaper site and, just for fun, 
         modify their contents. The instructions here relate to Chrome but some 
@@ -43,7 +78,7 @@
 
         <p>Now modify this to add your own message to the page</p>
 
-        <pre>headlines[0].innerHTML = "COMP2110 Found to be Best Unit in the Universe!"</pre>
+        <pre>headlines[0].innerHTML = "Macquarie Found to be Best University in the Universe!"</pre>
 
         <p>Check the page to see your updated headline.</p>
 
