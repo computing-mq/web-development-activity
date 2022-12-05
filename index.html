@@ -34,10 +34,40 @@
         the Elements and Console tabs for this activity.  
         </p>
 
+        <h3>Elements</h3>
         <p>In the <i>Elements</i> tab you can view the structure of the HTML 
         page - this is the language that web pages are written in.  
         Take a look at the structure of this page.  Look for the paragraphs
         &lt;p&gt;, and headers &lt;h2&gt;.</p>
+
+        <h3>Network</h3>
+
+        <p>The <i>Network</i> tab let's you see the requests sent from your
+        browser to the server and the response that comes back.  Select the 
+        Network tab and reload the page.  You should see requests for the 
+        page <i>web-development-activity/</i> but also for some other resources. 
+        What do these other resources do?</p>
+
+        <h3>Console</h3>
+
+        <p>The <i>Console</i> tab lets you run commands and interact with 
+        the web page that is loaded. It understands the 
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript">Javascript</a> 
+        programming language.  Here's a simple command:</p>
+
+        <pre>console.log('hello world!')</pre>
+
+        <p>Javascript is able to access the web page that we're viewing and even
+            make changes to it.  Here's a very destructive command.  After you try 
+            this, it refresh to get the page back.
+        </p>
+
+        <pre>document.write('&lt;h1>where did the page go?&lt;/h1>')</pre>
+
+        <p>The <code>document.write</code> command writes new text into the
+        current web page, in this case, replacing the existing contents. 
+        We can be more subtle than that, as we'll see in the next 
+        exercise. </p>
 
         <h2>Fake News</h2>
 
@@ -72,7 +102,22 @@
 
         <pre>headlines = document.getElementsByTagName("h3")</pre>
 
-        <p>Take the first of these and find the HTML content of the heading:</p>
+        <p>This code will create a variable called <code>headlines</code> that
+        will hold the array of headline elements from the page.  We can then
+        access these to find out what they are and even change them.</p>
+
+        <aside>
+            <h4>What is an Array?</h4>
+            <p>An array is a programming data structure that stores a
+                sequence of bits of data.   Your program can access these
+                one after another in sequence or pull out one particular 
+                element in the array.
+            </p>
+        </aside>
+
+        <p>Take the first of these headlines and find the HTML content of the heading
+            by using the square bracket notation.  Here 0 is the index 
+            of the first element of the array:</p>
 
         <pre>headlines[0].innerHTML</pre>
 
@@ -84,15 +129,26 @@
 
         <p>Ok, so we can fake the news, that's good but we can go further.</p>
 
-        <ol>
-        <li>Write a for loop that changes the content of all of the headlines 
-            to your chosen message</li>
-        <li>Write a function that takes your new message as an argument and 
-            modifies the headlines when it is called</li><li>On Pet News at 
-                least there are captions over some of the images - see if you can 
-                target these too - look at the class names on the elements 
-                containing the text.</li>
-        </ol>
+        <h3>Looping</h3>
+
+        <p>A loop in a programming language let's us do something 
+            repeatedly.  A common use is to do something to every element
+            in an array.  Here is an example loop:
+        </p>
+
+        <pre>
+for (let index = 0; index < 10; index++) {
+    console.log('around the loop', index);
+}</pre>
+
+        <p>This should output ten lines of text.</p>
+
+        <p>Now, here's your challenge: </p>
+
+        <p class="challenge">Write a for loop that changes the content of 
+            <b>all of the headlines</b> in the page 
+            to your chosen message</p>
+
 
         <p>Now, be careful to only use your new-found powers for good, not evil.</p>
     </body>
